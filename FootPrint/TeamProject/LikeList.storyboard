@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--WishList-->
+        <scene sceneID="9bJ-Iz-KMo">
+            <objects>
+                <viewController storyboardIdentifier="LikeList" title="WishList" id="YBy-OT-5S9" customClass="LikeListViewController" customModule="TeamProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oAS-OJ-lht">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tZi-YD-CKF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="likeListCell" rowHeight="120" id="Obk-gC-VCE" customClass="LikeListTableViewCell" customModule="TeamProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Obk-gC-VCE" id="80x-fm-ZBL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Bc-Jl-k1n">
+                                                    <rect key="frame" x="20" y="10" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="A22-fn-CJU"/>
+                                                        <constraint firstAttribute="height" constant="100" id="ef6-X9-1YU"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4N-nK-6XB">
+                                                    <rect key="frame" x="284" y="84" width="110" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="110" id="70f-ca-t3P"/>
+                                                        <constraint firstAttribute="height" constant="25" id="7NQ-RU-Z6a"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoP-UY-VXh">
+                                                    <rect key="frame" x="143" y="10" width="241" height="60"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="0Bc-Jl-k1n" secondAttribute="bottom" constant="10" id="2fa-eu-w2S"/>
+                                                <constraint firstItem="G4N-nK-6XB" firstAttribute="top" secondItem="RoP-UY-VXh" secondAttribute="bottom" constant="14" id="6Gk-38-jU1"/>
+                                                <constraint firstItem="0Bc-Jl-k1n" firstAttribute="top" secondItem="80x-fm-ZBL" secondAttribute="top" constant="10" id="9nh-bq-cNJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="RoP-UY-VXh" secondAttribute="trailing" constant="30" id="Aq5-V9-zJd"/>
+                                                <constraint firstItem="G4N-nK-6XB" firstAttribute="bottom" secondItem="80x-fm-ZBL" secondAttribute="bottomMargin" id="FXA-EE-SfT"/>
+                                                <constraint firstItem="RoP-UY-VXh" firstAttribute="top" secondItem="80x-fm-ZBL" secondAttribute="top" constant="10" id="L5m-RT-cAO"/>
+                                                <constraint firstItem="0Bc-Jl-k1n" firstAttribute="leading" secondItem="80x-fm-ZBL" secondAttribute="leading" constant="20" symbolic="YES" id="XGn-en-2VX"/>
+                                                <constraint firstItem="G4N-nK-6XB" firstAttribute="trailing" secondItem="80x-fm-ZBL" secondAttribute="trailingMargin" id="nac-pC-u8x"/>
+                                                <constraint firstItem="RoP-UY-VXh" firstAttribute="leading" secondItem="0Bc-Jl-k1n" secondAttribute="trailing" constant="23" id="sRo-0x-5Ai"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likeShoesBrand" destination="G4N-nK-6XB" id="9Ga-SU-BWA"/>
+                                            <outlet property="likeShoesImage" destination="0Bc-Jl-k1n" id="jho-t2-SYh"/>
+                                            <outlet property="likeShoesName" destination="RoP-UY-VXh" id="p0A-yO-5ZB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0sS-mi-RNF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tZi-YD-CKF" firstAttribute="bottom" secondItem="0sS-mi-RNF" secondAttribute="bottom" id="VFR-dr-7Xp"/>
+                            <constraint firstItem="tZi-YD-CKF" firstAttribute="trailing" secondItem="0sS-mi-RNF" secondAttribute="trailing" id="X6T-uG-cry"/>
+                            <constraint firstItem="tZi-YD-CKF" firstAttribute="top" secondItem="0sS-mi-RNF" secondAttribute="top" id="lha-OT-XK3"/>
+                            <constraint firstItem="tZi-YD-CKF" firstAttribute="leading" secondItem="0sS-mi-RNF" secondAttribute="leading" id="mV8-iD-inK"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="likeListTableView" destination="tZi-YD-CKF" id="zKm-V6-3sX"/>
+                        <segue destination="bjg-dg-Rpq" kind="show" identifier="newbalanceDetailSegue" id="0eA-55-UpX"/>
+                        <segue destination="s40-O6-e49" kind="show" identifier="nikeDetailSegue" id="YTE-ls-rNb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEA-2U-H8G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-152.17391304347828" y="-17.410714285714285"/>
+        </scene>
+        <!--NikeDetailViewController-->
+        <scene sceneID="pq8-nb-PDb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Shoes" referencedIdentifier="NikeDetailViewController" id="s40-O6-e49" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NsX-QQ-WkD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zok-ql-VVL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656" y="-131"/>
+        </scene>
+        <!--NewbalanceDetailViewController-->
+        <scene sceneID="Iof-9f-ldi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Shoes" referencedIdentifier="NewbalanceDetailViewController" id="bjg-dg-Rpq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7PF-o3-xpb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cG-2E-D6u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="691" y="94"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

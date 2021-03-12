@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="Kl2-be-Uld">
+            <objects>
+                <viewController storyboardIdentifier="Map" id="6Fj-BC-2ao" customClass="MapViewController" customModule="TeamProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="orI-JZ-AFv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FhZ-NE-AXo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="32"/>
+                                <segments>
+                                    <segment title="Nike"/>
+                                    <segment title="Newbalance"/>
+                                </segments>
+                                <connections>
+                                    <action selector="brandChoiceSegmentedAction:" destination="6Fj-BC-2ao" eventType="valueChanged" id="ZcN-n7-St0"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2t-Qg-O76" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="83" width="414" height="730"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K2X-gY-bp1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B2t-Qg-O76" firstAttribute="top" secondItem="FhZ-NE-AXo" secondAttribute="bottom" constant="8" symbolic="YES" id="2vl-Vh-pQa"/>
+                            <constraint firstItem="B2t-Qg-O76" firstAttribute="leading" secondItem="K2X-gY-bp1" secondAttribute="leading" id="OJR-Yi-ZaU"/>
+                            <constraint firstItem="B2t-Qg-O76" firstAttribute="trailing" secondItem="K2X-gY-bp1" secondAttribute="trailing" id="frH-5J-enp"/>
+                            <constraint firstItem="B2t-Qg-O76" firstAttribute="bottom" secondItem="K2X-gY-bp1" secondAttribute="bottom" id="kBE-NH-8l1"/>
+                            <constraint firstItem="FhZ-NE-AXo" firstAttribute="leading" secondItem="K2X-gY-bp1" secondAttribute="leading" id="obt-Ba-aQd"/>
+                            <constraint firstItem="FhZ-NE-AXo" firstAttribute="trailing" secondItem="K2X-gY-bp1" secondAttribute="trailing" id="paT-kw-sJ2"/>
+                            <constraint firstItem="FhZ-NE-AXo" firstAttribute="top" secondItem="K2X-gY-bp1" secondAttribute="top" id="w8m-rw-Ii9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map.fill" catalog="system" id="hen-zt-HqA"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="brandChoiceSegmentedControl" destination="FhZ-NE-AXo" id="FKy-jY-u5u"/>
+                        <outlet property="mapView" destination="B2t-Qg-O76" id="Pg0-RD-LbN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ia-dW-Ar5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="211.59420289855075" y="142.63392857142856"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TIk-Lc-XZ1">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="AHQ-2A-WFv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Map" referencedIdentifier="Map" id="RU8-l1-pMJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="ouF-Pt-RD1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gYC-fC-Mre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="896" y="-16"/>
+        </scene>
+        <!--Shoes-->
+        <scene sceneID="ois-Gt-GhH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Shoes" referencedIdentifier="Shoes" id="b5T-9I-zSx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="taZ-Pw-2Dz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g79-zK-VdP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="106"/>
+        </scene>
+        <!--Articles-->
+        <scene sceneID="3cd-6K-54d">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Articles" referencedIdentifier="Articles" id="Dwa-Fg-AAK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="9Rl-PS-tZr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xit-DH-S0L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="509"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="P8d-pB-m3e">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="TIk-Lc-XZ1" customClass="TabBarController" customModule="TeamProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZeR-fx-9d0">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="b5T-9I-zSx" kind="relationship" relationship="viewControllers" id="gj9-ax-Shi"/>
+                        <segue destination="Dwa-Fg-AAK" kind="relationship" relationship="viewControllers" id="5hf-fz-2oQ"/>
+                        <segue destination="RU8-l1-pMJ" kind="relationship" relationship="viewControllers" id="2Lf-4H-Cum"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xVN-fp-EV0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>
